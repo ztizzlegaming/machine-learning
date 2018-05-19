@@ -44,6 +44,7 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 
 # Import neural network stuff from keras
+from tensorflow import set_random_seed
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.utils import to_categorical
@@ -53,6 +54,9 @@ SEED = 42
 K_FOLDS = 10
 
 def main():
+	np.random.seed(SEED)
+	set_random_seed(SEED)
+
 	# Load iris data
 	iris = load_iris()
 	data = iris['data']
