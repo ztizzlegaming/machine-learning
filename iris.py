@@ -19,7 +19,7 @@
 # tensorflow
 # 
 # Run:
-# python3 ffn_iris.py
+# python3 iris.py
 # 
 # Jordan Turley
 
