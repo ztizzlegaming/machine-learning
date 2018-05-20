@@ -13,6 +13,7 @@
 # confusion matrix.
 # 
 # Dependencies:
+# numpy
 # sklearn
 # keras
 # tensorflow
