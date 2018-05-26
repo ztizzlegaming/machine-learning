@@ -1,6 +1,8 @@
 # Machine Learning
 ## Jordan Turley
-### Several machine learning/data mining used on popular datasets.
+
+Machine Learning projects from my machine learning class (CSC 420) and on my own.
+
 
 Most of these will require the installation of several libraries:
 * [numpy](http://www.numpy.org/)&nbsp;&nbsp;&nbsp;&nbsp;`sudo pip3 install numpy`
