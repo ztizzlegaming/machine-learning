@@ -1,0 +1,9 @@
+data_1_day contains all of the stock closing prices that have been parsed from the files in data_original. This is where the data is read from in the python scripts.
+
+data_original contains the raw files that were downloaded from Yahoo Finance.
+
+parse_data.py parses the raw files from Yahoo Finance and generates and puts them in the data_1_day folder. This would be ran before either of the other files, as this sets up the data for the data mining models.
+
+stock_market.py runs logistic regression, k-nearest neighbors, and support vector machines on the data. Grid search is performed to find optimal values of hyperparameters, then k-nearest neighbors is ran on the test set to determine our final performance. random_state is set to a constant for reproducibility in relation to the report. I only use sklearn in this file. Running all of the code in this file takes about 6 or 7 minutes, but I have most of it commented out and documented what it does, so that this file can be ran in a reasonable amount of time to see k-nearest neighbors.
+
+stock_market_rnn.py runs a recurrent neural network on the data. The data for each stock is independently split into sets of a certain number of days to 'look back' for the features, and the class is either increase or decrease, depending on the closing price the next day. I also set random_state to a constant for reproducibility. I use sklearn along with a library called keras, which uses tensorflow. Finding the values for hyperparameters for even just five stocks took over a day of runtime, but like the other file, I have mostly commented out this code and documented what it does, so that the only code that runs is for the stocks MAT and LB.
